@@ -11,6 +11,12 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="/restaurants">Restaurants</a>
+  <%= link_to 'New Restaurant', new_restaurant_path %>
+  </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

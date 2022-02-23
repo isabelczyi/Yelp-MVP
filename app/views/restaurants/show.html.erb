@@ -28,6 +28,11 @@
   <% end %>
 </p>
 
-<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<h1>Add Review for <%= @restaurant.name %></h1>
+  <%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+
 <%= link_to 'Back', restaurants_path %>
